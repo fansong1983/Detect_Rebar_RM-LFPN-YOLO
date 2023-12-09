@@ -1,7 +1,5 @@
 ## RM-LFPN-YOLO for Rebar Counting
 
-## Reference
-code:https://github.com/bubbliiiing/mobilenet-yolov4-pytorch
 ## Required environment
 torch==1.13.1 cuda11.6
 
@@ -16,17 +14,24 @@ password：psq0
 
 ## Training
 1. Preparation of datasets 
-**You need to download the dataset before training, unzip it and put it in the root directory**  
+**You need to download the dataset before training, unzip it and put it in the root directory.**  
 
 2. Processing of datasets   
+python voc_annotation.py
 Modify annotation_mode=2 in voc_annotation.py and run voc_annotation.py to generate 2007_train.txt and 2007_val.txt in the root directory.   
 
 3. Training 
 python train.py 
 
 ## Evaluation 
-python get_map.py to get the evaluation results, which are saved in the map_out folder.(Modify model_path as well as classes_path inside yolo.py.)
-python summary.py to get the number of parameters and calculations for the model.
+python get_map.py 
+get the evaluation results, which are saved in the map_out folder.(Modify model_path as well as classes_path inside yolo.py.)
+python summary.py 
+get the number of parameters and calculations for the model.
 ## Predict   
-python predict.py(You need to go to yolo.py and change the model_path and classes_path.)
-notice:Settings inside predict.py allow for fps testing and video video detection.
+python predict.py
+(You need to go to yolo.py and change the model_path and classes_path.)
+**Settings inside predict.py allow for fps testing and video video detection.** 
+
+## Reference
+github:https://github.com/bubbliiiing/mobilenet-yolov4-pytorch
