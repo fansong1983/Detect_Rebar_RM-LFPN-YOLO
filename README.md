@@ -1,7 +1,7 @@
 ## RM-LFPN-YOLO for Rebar Counting
 
 ## Required environment
-torch==1.13.1 cuda11.6
+torch==1.13.1 cuda==11.6
 
 ## File download 
 weight
