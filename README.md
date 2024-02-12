@@ -1,5 +1,7 @@
 ## RM-LFPN-YOLO for Rebar Counting
 
+paper：https://doi.org/10.1109/ACCESS.2024.3349978
+
 ## Required environment
 torch==1.13.1 cuda==11.6
 
